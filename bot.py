@@ -32,7 +32,8 @@ from handlers.menu import (
     menu_button_handler
 )
 
-from config import BOT_TOKEN
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 
 def main():
