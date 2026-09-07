@@ -32,9 +32,15 @@ from handlers.menu import (
     menu_button_handler
 )
 
-import os
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+# # from config import BOT_TOKEN
+# #this is for deploying
+# # import os
+# # BOT_TOKEN = os.getenv("BOT_TOKEN")
+# if not BOT_TOKEN:
+#     raise ValueError("BOT_TOKEN environment variable is not set")
+from config import BOT_TOKEN
 
+from handlers.ai_chat import ai_chat_handler
 
 def main():
     # Initialize database
@@ -122,16 +128,23 @@ def main():
     # Settlement
     # --------------------------------
     app.add_handler(settlement_handler)
-
     # --------------------------------
     # Menu buttons
     # --------------------------------
     app.add_handler(
         MessageHandler(
-            filters.TEXT & ~filters.COMMAND,
+            filters.Regex(
+                r"^(💰 Balance|➕ Add Expense|📋 Expenses|💸 Settle|👥 Groups|👤 Members|⚙️ Settings)$"
+            ),
             menu_button_handler
         )
     )
+    # --------------------------------
+    # AI natural language chat
+    # --------------------------------
+    app.add_handler(ai_chat_handler)
+
+    
     print("🤖 Expense Manager Bot is running...")
     app.run_polling()
 
