@@ -1,8 +1,13 @@
 import json
 import requests
+import os
 
 # Assuming you have OPENROUTER_API_KEY in your config
-from config import OPENROUTER_API_KEY
+# from config import OPENROUTER_API_KEY
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+if not OPENROUTER_API_KEY:
+    print("env variable not set")
+
 
 # Optional: Set these if you want to track usage on OpenRouter
 SITE_URL = ""  # Your site URL
