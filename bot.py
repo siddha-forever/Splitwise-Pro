@@ -34,11 +34,11 @@ from handlers.menu import (
 
 # # from config import BOT_TOKEN
 # #this is for deploying
-# # import os
-# # BOT_TOKEN = os.getenv("BOT_TOKEN")
-# if not BOT_TOKEN:
-#     raise ValueError("BOT_TOKEN environment variable is not set")
-from config import BOT_TOKEN
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN environment variable is not set")
+# from config import BOT_TOKEN
 
 from handlers.ai_chat import ai_chat_handler
 
