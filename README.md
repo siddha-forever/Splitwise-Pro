@@ -20,20 +20,6 @@ The bot is **hosted and running live**. Anyone can start using it right away on 
 - 📜 **Expense History** — View, edit, and delete past expenses
 - 🌍 **Multi-Currency Support** — Handle multiple currencies per group
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Python 3.9+
-- Telegram Bot Token from @BotFather
-- PostgreSQL (or SQLite for local dev)
-
-### Installation
-1. Clone: `git clone https://github.com/yourusername/splitwise-pro-bot.git`
-2. Create venv: `python -m venv venv && source venv/bin/activate`
-3. Install: `pip install -r requirements.txt`
-4. Copy `.env.example` to `.env` and fill in values
-5. Run: `python bot.py`
-
 ## 📖 Commands
 
 | Command | Description |
