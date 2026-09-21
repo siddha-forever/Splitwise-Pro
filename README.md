@@ -2,6 +2,11 @@
 
 A powerful Telegram bot that brings Splitwise-style expense splitting right into your chats. Track shared expenses, settle debts, and manage group finances without leaving Telegram.
 
+### **Live Bot — Try it now!**
+
+The bot is **hosted and running live**. Anyone can start using it right away on Telegram:
+### 👉 [**@Splitwise Pro Telegram Bot**](https://t.me/sid_exp_manager_bot)
+
 ## ✨ Features
 
 - 🧠 **Natural Language Understanding** — Just type what you mean. The bot uses an LLM to decipher intent from free-form messages like *"Alice paid 500 for dinner, split it between all four of us"*
